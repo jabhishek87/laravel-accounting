@@ -1,6 +1,6 @@
 <?php
 
-class HomeController extends BaseController {
+class ReceivablesController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -15,9 +15,19 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function getCheckList()
 	{
-		return View::make('home');
+		$data = array();
+		$data['allReceivables'] = Receivables::paginate(15);
+
+		return View::make('checklist')->with("data", $data);
+	}
+
+	public function searchByNumber($q){
+		$data = array();
+		//echo $q;
+		$results = DB::select('select * from users where id = ?', array(1));
+		
 	}
 
 }

@@ -11,7 +11,20 @@
 |
 */
 
-Route::get('/', function()
+/*Route::get('/', function()
 {
 	return View::make('home');
-});
+});*/
+
+Route::get('/', array(
+    'as'    => 'home',
+    'uses'  => 'HomeController@showWelcome'
+));
+Route::get('/checkslist', array(
+    'as'    => 'checklist',
+    'uses'  => 'ReceivablesController@getCheckList'
+));
+Route::get('/search-by-check-number/{q}', array(
+    'as'    => 'search-check-number',
+    'uses'  => 'ReceivablesController@searchByNumber'
+));
