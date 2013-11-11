@@ -19,15 +19,28 @@ class ReceivablesController extends BaseController {
 	{
 		$data = array();
 		$data['allReceivables'] = Receivables::paginate(15);
-
+		
 		return View::make('checklist')->with("data", $data);
 	}
 
+	public function getCheckListAjax()
+	{
+
+		$allReceivables = Receivables::select(array('receivables.status','receivables.number','receivables.amount'));
+		return Datatables::of($allReceivables)->make();
+	}
+
 	public function searchByNumber($q){
-		$data = array();
+		//$data = array();
 		//echo $q;
-		$results = DB::select('select * from users where id = ?', array(1));
-		
+		$results = Receivables::where('number', 'LIKE', '%'.$q.'%')->get();
+		//$results = DB::select('select * from receivables where number = ?', array(q));
+		//print_r($results);
+		foreach($results as $item)
+		{
+			$data[] =  $item->number;
+		}
+		return json_encode($data);
 	}
 
 }

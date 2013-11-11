@@ -24,6 +24,12 @@ Route::get('/checkslist', array(
     'as'    => 'checklist',
     'uses'  => 'ReceivablesController@getCheckList'
 ));
+
+Route::get('/checkslist-ajax', array(
+    'as'    => 'checklist-ajax',
+    'uses'  => 'ReceivablesController@getCheckListAjax'
+));
+
 Route::get('/search-by-check-number/{q}', array(
     'as'    => 'search-check-number',
     'uses'  => 'ReceivablesController@searchByNumber'

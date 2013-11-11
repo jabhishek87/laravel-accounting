@@ -1440,77 +1440,6 @@
         ]
     },
     {
-        "name": "jasonlewis/basset",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/jasonlewis/basset.git",
-            "reference": "d1e7d7c8c448a1cca2538d38289af3b34fc3e18c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/jasonlewis/basset/zipball/d1e7d7c8c448a1cca2538d38289af3b34fc3e18c",
-            "reference": "d1e7d7c8c448a1cca2538d38289af3b34fc3e18c",
-            "shasum": ""
-        },
-        "require": {
-            "kriswallsmith/assetic": "1.1.*",
-            "php": ">=5.3.0"
-        },
-        "require-dev": {
-            "illuminate/config": "4.0.*",
-            "illuminate/console": "4.0.*",
-            "illuminate/filesystem": "4.0.*",
-            "illuminate/log": "4.0.*",
-            "illuminate/routing": "4.0.*",
-            "illuminate/support": "4.0.*",
-            "mockery/mockery": ">=0.7.2",
-            "symfony/process": "2.3.*"
-        },
-        "suggest": {
-            "aws/aws-sdk-php": "Deploy static assets directly to your S3 buckets.",
-            "rackspace/php-cloudfiles": "Deploy static assets directly to your Cloud Files container."
-        },
-        "time": "2013-06-14 06:13:15",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "4.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Basset": "src/"
-            },
-            "classmap": [
-                "tests/Cases/FilterTestCase.php"
-            ],
-            "files": [
-                "src/helpers.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-2-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Jason Lewis",
-                "email": "jason.lewis1991@gmail.com",
-                "homepage": "http://jasonlewis.me",
-                "role": "Creator"
-            }
-        ],
-        "description": "A better asset management package for Laravel.",
-        "keywords": [
-            "assets",
-            "basset",
-            "laravel"
-        ]
-    },
-    {
         "name": "symfony/process",
         "version": "2.3.x-dev",
         "version_normalized": "2.3.9999999.9999999-dev",
@@ -2011,6 +1940,128 @@
         "description": "The Laravel Framework.",
         "keywords": [
             "framework",
+            "laravel"
+        ]
+    },
+    {
+        "name": "bllim/datatables",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bllim/laravel4-datatables-package.git",
+            "reference": "c306abcee45df8c429b67cdf02685ed41f18c400"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bllim/laravel4-datatables-package/zipball/c306abcee45df8c429b67cdf02685ed41f18c400",
+            "reference": "c306abcee45df8c429b67cdf02685ed41f18c400",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/filesystem": ">=4.0.0",
+            "illuminate/support": ">=4.0.0",
+            "illuminate/view": ">=4.0.0",
+            "php": ">=5.3.0"
+        },
+        "time": "2013-09-08 18:11:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/migrations"
+            ],
+            "psr-0": {
+                "Bllim\\Datatables": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Bilal Gultekin",
+                "email": "bilal@bilal.im"
+            }
+        ],
+        "description": "Server-side handler of DataTables Jquery Plugin for Laravel 4",
+        "keywords": [
+            "datatable",
+            "datatables",
+            "datatables jquery plugin",
+            "laravel",
+            "laravel4"
+        ]
+    },
+    {
+        "name": "jasonlewis/basset",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jasonlewis/basset.git",
+            "reference": "79b94c3edef5015a34e3a0f834586358a6f99885"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jasonlewis/basset/zipball/79b94c3edef5015a34e3a0f834586358a6f99885",
+            "reference": "79b94c3edef5015a34e3a0f834586358a6f99885",
+            "shasum": ""
+        },
+        "require": {
+            "kriswallsmith/assetic": "1.1.*",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "illuminate/config": "4.0.*",
+            "illuminate/console": "4.0.*",
+            "illuminate/filesystem": "4.0.*",
+            "illuminate/log": "4.0.*",
+            "illuminate/routing": "4.0.*",
+            "illuminate/support": "4.0.*",
+            "mockery/mockery": ">=0.7.2",
+            "symfony/process": "2.3.*"
+        },
+        "suggest": {
+            "aws/aws-sdk-php": "Deploy static assets directly to your S3 buckets.",
+            "rackspace/php-cloudfiles": "Deploy static assets directly to your Cloud Files container."
+        },
+        "time": "2013-11-06 08:17:47",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Basset": "src/"
+            },
+            "classmap": [
+                "tests/Cases/FilterTestCase.php"
+            ],
+            "files": [
+                "src/helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-2-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Jason Lewis",
+                "email": "jason.lewis1991@gmail.com",
+                "homepage": "http://jasonlewis.me",
+                "role": "Creator"
+            }
+        ],
+        "description": "A better asset management package for Laravel.",
+        "keywords": [
+            "assets",
+            "basset",
             "laravel"
         ]
     }
